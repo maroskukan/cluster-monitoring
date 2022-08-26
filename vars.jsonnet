@@ -12,7 +12,7 @@
     },
     {
       name: 'armExporter',
-      enabled: false,
+      enabled: true,
       file: import 'modules/arm_exporter.jsonnet',
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       name: 'metallbExporter',
-      enabled: false,
+      enabled: true,
       file: import 'modules/metallb.jsonnet',
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       name: 'traefikExporter',
-      enabled: false,
+      enabled: true,
       file: import 'modules/traefik.jsonnet',
     },
     {
@@ -48,12 +48,12 @@
   ],
 
   k3s: {
-    enabled: false,
-    master_ip: ['192.168.1.15'],
+    enabled: true,
+    master_ip: ['10.0.2.201'],
   },
 
   // Domain suffix for the ingresses
-  suffixDomain: '192.168.1.15.nip.io',
+  suffixDomain: '10.0.2.202.nip.io',
   // Additional domain suffixes for the ingresses.
   // For example suffixDomain could be an external one and this a local domain.
   additionalDomains: [],
